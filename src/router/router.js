@@ -4,7 +4,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 import Homepage from '../views/HomePage.vue';
-import UsersPost from '../components/UsersPost.vue';
+import UserPost from '../components/UsersPost.vue';
 
 
 export default new Router({
@@ -17,9 +17,9 @@ export default new Router({
       
     },
      {
-      path: '/',
-          component: Homepage,
-      name: 'Home',
+      path: '/user-post',
+          component: UserPost,
+      name: 'UserPost',
       
     },
     {
