@@ -16,7 +16,7 @@ export default {
       users: []
     };
   },
-  mounted() {
+  beforeCreate() {
     this.$http
       .get("https://jsonplaceholder.typicode.com/users")
       .then(res => {

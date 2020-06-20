@@ -1,8 +1,7 @@
 <template>
   <section>
-    <div v-for="(user, index) in users" :key="index">
+    <div>
       <h1>Name: {{user.name}}</h1>
-      <p>Username:{{user.username}}</p>
       <p>Email: {{user.email}}</p>
       <p>Phone:{{user.phone}}</p>
     </div>
@@ -13,17 +12,17 @@
 export default {
   data() {
     return {
-      users: []
+      user: []
     };
   },
-  mounted() {
+  beforeCreate() {
     this.$http
       .get("https://jsonplaceholder.typicode.com/users/1")
       .then(res => {
         return res.json();
       })
       .then(data => {
-        this.users = data;
+        this.user = data;
         console.log(data);
       });
   }
