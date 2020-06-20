@@ -6,6 +6,7 @@ Vue.use(Router);
 import Homepage from '../views/HomePage.vue';
 import UserPost from '../components/UserPost.vue';
 import UserDetails from '../components/UserDetails.vue';
+import SinglePost from '../components/SinglePost.vue';
 
 
 export default new Router({
@@ -27,6 +28,12 @@ export default new Router({
             path: '/user-details/:id',
             component: UserDetails,
             name: 'UserDetails',
+
+        },
+          {
+            path: '/single-post',
+            component: SinglePost,
+            name: 'SinglePost',
 
         },
         {

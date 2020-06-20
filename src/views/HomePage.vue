@@ -1,6 +1,6 @@
 <template>
   <section>
-    <figure v-for="(user, index) in users" :key="index">
+    <figure v-for="(user) in users" :key="user.id">
       <router-link
         class="users-container"
         tag="div"
