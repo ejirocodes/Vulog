@@ -22,7 +22,6 @@ export default {
       })
       .then(data => {
         this.post = data;
-        console.log(data);
       });
     this.$http
       .get("https://jsonplaceholder.typicode.com/posts/1/comments")
@@ -35,7 +34,6 @@ export default {
           resultArr.push(data[key]);
         }
         this.comments = resultArr;
-        console.log("comments", this.comments);
       });
   }
 };

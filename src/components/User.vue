@@ -29,7 +29,6 @@ export default {
       })
       .then(data => {
         this.users = data;
-        console.log(this.users);
       });
   }
 };

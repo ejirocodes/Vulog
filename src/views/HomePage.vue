@@ -33,7 +33,7 @@ export default {
       })
       .then(data => {
         this.users = data;
-        console.log(this.users);
+        console.log('home component',this.users);
       });
   }
 };
