@@ -1,10 +1,8 @@
 <template>
   <section>
-    <div>
       <h1>Name: {{user.name}}</h1>
       <p>Email: {{user.email}}</p>
       <p>Phone:{{user.phone}}</p>
-    </div>
   </section>
 </template>
 
