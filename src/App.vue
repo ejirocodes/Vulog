@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link>
-    <router-link to="/single-post">Single Post</router-link>
+    <app-navbar></app-navbar>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import AppNavbar from "./components/AppNavbar";
 export default {
   name: "App",
-  components: {}
+  components: {
+    AppNavbar
+  }
 };
 </script>
 
@@ -19,6 +21,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ecf0f1;
+  padding: 0.5rem;
 }
 </style>

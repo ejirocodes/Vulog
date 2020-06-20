@@ -1,5 +1,5 @@
 <template>
-  <section class="users-container">
+  <section class="users-container mt-3">
     <figure class="user" v-for="(user) in users" :key="user.id">
       <router-link
         tag="div"
@@ -7,8 +7,9 @@
           name: 'UserDetails',
           params: { id: user.id}
         }"
+        exact
       >
-        <h1>Name: {{user.name}}</h1>
+        <h2>{{user.name}}</h2>
         <p>Username:{{user.username}}</p>
         <p>Email: {{user.email}}</p>
         <p>Phone:{{user.phone}}</p>
@@ -41,24 +42,20 @@ export default {
 <style>
 .users-container {
   cursor: pointer;
-  /* Grid Fallback */
   display: flex;
   flex-wrap: wrap;
-  /* Supports Grid */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
-  grid-gap: 1em;
 }
 .user {
+  height: 20rem;
   margin-left: 5px;
   margin-right: 5px;
   padding: 0.8rem;
   flex: 1 1 200px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #fff;
 }
 .user:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 </style>
