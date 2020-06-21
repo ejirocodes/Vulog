@@ -63,4 +63,9 @@ h2,
   font-weight: 600;
   display: block;
 }
+@media screen  and (max-width: 425px){
+  section {
+    padding: 1rem;
+  }
+}
 </style>
