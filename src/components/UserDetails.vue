@@ -45,4 +45,7 @@ export default {
   width: 20rem;
   margin: auto;
 }
+h2  {
+  text-align: center;
+}
 </style>
