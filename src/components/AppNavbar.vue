@@ -1,14 +1,7 @@
 <template>
   <b-navbar toggleable="lg" type="dark" :sticky="true" variant="dark">
     <b-navbar-brand to="/">Home</b-navbar-brand>
-
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item exact to="/post">Post</b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
+    <b-nav-item exact to="/post" class="ml-auto post-item">Post</b-nav-item>
   </b-navbar>
 </template>
 
@@ -16,5 +9,11 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
+.post-item {
+  display: flex;
+}
+.post-item * {
+  color: #fff !important;
+}
 </style>
