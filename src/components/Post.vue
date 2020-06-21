@@ -3,7 +3,10 @@
     <h2>{{post.title}}</h2>
     <p class="post-body mb-4">{{post.body}}</p>
     <p>Comments ({{(Object.keys(comments).length)}})</p>
-    <p class="comments" v-for="(comment, index) in comments" :key="comment.id">{{comments[index].body}}</p>
+    <p class="comments" v-for="(comment, index) in comments" :key="comment.id">
+      <span class="commenter mb-3">{{comments[index].name}}</span> 
+      {{comments[index].body}}
+    </p>
   </section>
 </template>
 
@@ -42,6 +45,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 4rem;
 }
 h2,
 .post-body {
@@ -52,5 +56,11 @@ h2,
   background-color: #fff;
   padding: 1.8rem;
   border-left-style: groove;
+  text-transform: capitalize;
+}
+.commenter {
+  color: #343A40;
+  font-weight: 600;
+  display: block;
 }
 </style>
