@@ -1,20 +1,20 @@
 <template>
-  <section class="users-container mt-3">
-    <figure class="user" v-for="(user) in users" :key="user.id">
-      <router-link
-        tag="div"
-        :to="{
+  <section class="center mt-3">
+    <h2 style="text-align: center" class="mb-3">All Users</h2>
+    <div class="users-container mt-3">
+      <figure class="user" v-for="(user) in users" :key="user.id">
+        <router-link
+          tag="div"
+          :to="{
           name: 'UserDetails',
           params: { id: user.id}
         }"
-        exact
-      >
-        <h2>{{user.name}}</h2>
-        <p>Username:{{user.username}}</p>
-        <p>Email: {{user.email}}</p>
-        <p>Phone:{{user.phone}}</p>
-      </router-link>
-    </figure>
+          exact
+        >
+          <h2>{{user.name}}</h2>
+        </router-link>
+      </figure>
+    </div>
   </section>
 </template>
 
@@ -33,7 +33,7 @@ export default {
       })
       .then(data => {
         this.users = data;
-        console.log('home component',this.users);
+        console.log("home component", this.users);
       });
   }
 };

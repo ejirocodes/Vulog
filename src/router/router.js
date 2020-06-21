@@ -4,7 +4,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 import Homepage from '../views/HomePage.vue';
-import UserPosts from '../components/UserPosts.vue';
+import UserDetails from '../components/UserDetails.vue';
 
 
 export default new Router({
@@ -17,9 +17,9 @@ export default new Router({
 
         },
         {
-            path: '/user-post/:id',
-            component: UserPosts,
-            name: 'UserPosts',
+            path: '/user-details/:id',
+            component: UserDetails,
+            name: 'UserDetails',
 
         },
         //   {
