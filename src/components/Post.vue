@@ -1,8 +1,8 @@
 <template>
   <section>
-    <h1>Title: {{post.title}}</h1>
+    <h2>{{post.title}}</h2>
     <p>{{post.body}}</p>
-    <p v-for="(comment, index) in comments" :key="comment.id">Comments: {{comments[index].body}}</p>
+    <!-- <p v-for="(comment, index) in comments" :key="comment.id">Comments: {{comments[index].body}}</p> -->
   </section>
 </template>
 
@@ -10,11 +10,11 @@
 export default {
   data() {
     return {
-      post: [],
-      comments: {}
+      post: []
+      // comments: {}
     };
   },
-  beforeCreate() {
+  mounted() {
     this.$http
       .get("https://jsonplaceholder.typicode.com/posts/1")
       .then(res => {

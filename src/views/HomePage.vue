@@ -4,7 +4,6 @@
     <div class="users-container mt-3">
       <figure class="user" v-for="(user) in users" :key="user.id">
         <router-link
-          tag="div"
           :to="{
           name: 'UserDetails',
           params: { id: user.id}
@@ -25,7 +24,7 @@ export default {
       users: []
     };
   },
-  beforeCreate() {
+  mounted() {
     this.$http
       .get("https://jsonplaceholder.typicode.com/users")
       .then(res => {

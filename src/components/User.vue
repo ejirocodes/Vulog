@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-3 d-flex flex-center justify" >
+  <section class="mt-3 d-flex flex-center justify">
     <figure class="user flex flex-center justify">
       <h2>{{user.name}}</h2>
       <p>Email: {{user.email}}</p>
@@ -21,7 +21,7 @@ export default {
       return this.users.find(user => user.id === id);
     }
   },
-  beforeCreate() {
+  mounted() {
     this.$http
       .get("https://jsonplaceholder.typicode.com/users")
       .then(res => {

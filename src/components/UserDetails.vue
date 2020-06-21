@@ -22,7 +22,7 @@ export default {
       return this.users.find(user => user.id === id);
     }
   },
-  beforeCreate() {
+  mounted() {
     this.$http
       .get("https://jsonplaceholder.typicode.com/users")
       .then(res => {
