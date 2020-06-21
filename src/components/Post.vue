@@ -1,8 +1,9 @@
 <template>
-  <section>
+  <section class="mt-3">
     <h2>{{post.title}}</h2>
-    <p>{{post.body}}</p>
-    <p v-for="(comment, index) in comments" :key="comment.id">Comments: {{comments[index].body}}</p>
+    <p class="post-body mb-4">{{post.body}}</p>
+    <p>Comments ({{(Object.keys(comments).length)}})</p>
+    <p class="comments" v-for="(comment, index) in comments" :key="comment.id">{{comments[index].body}}</p>
   </section>
 </template>
 
@@ -29,11 +30,8 @@ export default {
         return res.json();
       })
       .then(data => {
-        const resultArr = [];
-        for (let key in data) {
-          resultArr.push(data[key]);
-        }
-        this.comments = resultArr;
+        this.comments = data;
+        console.log(this.comments.lenght);
       });
   }
 };
@@ -41,12 +39,18 @@ export default {
 
 <style scoped>
 section {
-      display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-h2 {
+h2,
+.post-body {
   text-transform: capitalize;
+  font-weight: 600;
+}
+.comments {
+  background-color: #fff;
+  padding: 1.8rem;
+  border-left-style: groove;
 }
 </style>

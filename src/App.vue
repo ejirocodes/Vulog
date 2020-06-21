@@ -28,7 +28,7 @@ html {
   padding: 0;
 }
 body {
-  background-color: #ecf0f1;
+  background-color: #ecf0f1 !important;
   padding: 0.5rem;
 }
 </style>
