@@ -5,6 +5,7 @@ Vue.use(Router);
 
 import Homepage from '../views/HomePage.vue';
 import UserDetails from '../components/UserDetails.vue';
+import Post from '../components/Post.vue';
 
 
 export default new Router({
@@ -22,12 +23,12 @@ export default new Router({
             name: 'UserDetails',
 
         },
-        //   {
-        //     path: '/single-post',
-        //     component: SinglePost,
-        //     name: 'SinglePost',
+          {
+            path: '/post',
+            component:Post,
+            name: 'Post',
 
-        // },
+        },
         {
             path: '*',
             name: 'NotFound',
