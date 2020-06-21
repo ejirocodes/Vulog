@@ -2,7 +2,7 @@
   <section>
     <h2>{{post.title}}</h2>
     <p>{{post.body}}</p>
-    <!-- <p v-for="(comment, index) in comments" :key="comment.id">Comments: {{comments[index].body}}</p> -->
+    <p v-for="(comment, index) in comments" :key="comment.id">Comments: {{comments[index].body}}</p>
   </section>
 </template>
 
@@ -10,8 +10,8 @@
 export default {
   data() {
     return {
-      post: []
-      // comments: {}
+      post: [],
+      comments: {}
     };
   },
   mounted() {
@@ -39,5 +39,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+section {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+  text-transform: capitalize;
+}
 </style>
