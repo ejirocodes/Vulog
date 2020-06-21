@@ -4,6 +4,8 @@
     <div class="users-container mt-3">
       <figure class="user" v-for="(user) in users" :key="user.id">
         <router-link
+        tag="div"
+        class="router-link"
           :to="{
           name: 'UserDetails',
           params: { id: user.id}
@@ -56,5 +58,9 @@ export default {
 }
 .user:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.router-link {
+  width: 100%;
+  height: 100%;
 }
 </style>
